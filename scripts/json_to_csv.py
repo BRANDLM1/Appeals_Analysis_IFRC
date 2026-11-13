@@ -10,9 +10,10 @@ import pandas as pd
 # This may be re-purposed for converting other IFRC GO API datasets to CSV by simply changing the URL and the output file name.
 # Note for self and team: Future script enhancements may include batch processing and error handling for the capturing of multiple or exceptionally large datasets.
 
-# Adjusted page limit to 1000, to fetch more records per request after experiencing recurring entries in CSV
+# Adjusted page limit to 1000, to fetch more records per request after experiencing recurring entries in CSV. Duplicates dropped from 56 to 2.
 # Possibly due to pagination overlap or inconsistencies
-url = "https://goadmin.ifrc.org/api/v2/appeal/?limit=1000"
+# Additional ordering by ID request implemented to discourage inconsistent query results. Duplicates dropped to 0.
+url = "https://goadmin.ifrc.org/api/v2/appeal/?limit=1000&ordering=id"
 records = []
 pages = 1
 while url:
