@@ -12,7 +12,7 @@ import pandas as pd
 
 url = "https://goadmin.ifrc.org/api/v2/appeal/"
 records = []
-
+pages = 1
 while url:
     try:
         print("Requesting:", url)
@@ -22,11 +22,12 @@ while url:
 
         data = response.json()
         records.extend(data["results"])
-        url = data.get("next")
+        print(f"Fetched {len(data["results"])} records from page {pages}")
 
-        print(f"Fetched %d records from page %d" % (len(data["results"]), int(url.split("page=")[-1])))
+        url = data.get("next")
         if url:
-            print(f"Fetching page %d" % int(url.split("page=")))
+            pages+=1
+            print(f"Fetching page {pages}")
 
         
     #Error handling for the http request
