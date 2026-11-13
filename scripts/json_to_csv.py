@@ -40,6 +40,6 @@ print(f"Downloaded: {len(records)} records")
 
 #Flattening JSON records to df, outputting to CSV
 df = pd.json_normalize(records)
-df.to_csv("data/raw_appeals_data.csv", index=False)
-print("Records saved to data/raw_appeals_data.csv")
+df.to_csv("../data/raw_appeals_data.csv", index=False)
+print("Records saved to ../data/raw_appeals_data.csv")
     
