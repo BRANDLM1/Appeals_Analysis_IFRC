@@ -108,3 +108,8 @@ print(df[financial_cols].isna().sum())
 
 print("Negative financial values:")
 print((df[["amount_requested", "amount_funded"]] < 0).sum())
+
+# Complete record for inspection, plus unique value options for categorical columns
+print(df.iloc[10].to_json(indent=4))
+for col in ['event_details.ifrc_severity_level_display', 'country.record_type_display','dtype.name','status','status_display', 'atype','atype_display']:
+    print(f'{col}: {df[col].unique()}')
