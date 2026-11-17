@@ -32,7 +32,6 @@ while url:
             pages+=1
             print(f"Fetching page {pages}")
 
-        
     #Error handling for the http request
     except requests.exceptions.HTTPError as err:
         print(f"HTTP error occurred: {err}")
@@ -40,6 +39,12 @@ while url:
         print(f"Other request error occurred: {err}")
 
 print(f"Downloaded: {len(records)} records")
+
+# Record validation and duplicate check
+ids = [record["id"] for record in records]
+print("Unique IDs:", len(set(ids)))
+print("IDs sorted:", ids == sorted(ids))
+print("Duplicate IDs:", len(ids) - len(set(ids)))
 
 #Flattening JSON records to df, outputting to CSV
 df = pd.json_normalize(records)
