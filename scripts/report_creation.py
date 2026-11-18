@@ -32,6 +32,7 @@ report_summary = {
     'eligible_for_analysis': int(eligible.sum()),
     "incomplete_or_ineligible_for_analysis": int((~eligible).sum()),
     'total_requested_chf': total_requested,
+    'total_funded_chf': total_funded,
     'total_funding_gap_chf': total_funding_gap_chf,
     'funding_pct': funding_percentage,
     'appeals_below_50_pct': appeals_below_50_pct,
