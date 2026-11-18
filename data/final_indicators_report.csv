@@ -3,6 +3,7 @@ total_appeals,8.0
 eligible_for_analysis,8.0
 incomplete_or_ineligible_for_analysis,0.0
 total_requested_chf,251500000.0
+total_funded_chf,102158311.503005
 total_funding_gap_chf,149341688.496995
 funding_pct,40.61960695944533
 appeals_below_50_pct,5.0

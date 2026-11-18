@@ -7,9 +7,9 @@ df = pd.read_csv("../data/cleaned_appeals_data.csv")
 
 df['start_date'] = pd.to_datetime(df["start_date"], errors="coerce", utc=True)
 
-# Filter to emergency appeals from Jan. 2026 - present
+# Filter to emergency appeals from Jan. 2022 - present
 report_df = df[
-    (df["atype"] == 1) & (df["start_date"] >= "2026-01-01") & (df["start_date"] < "2026-11-18")
+    (df["atype"] == 1) & (df["start_date"] >= "2022-01-01") & (df["start_date"] < "2026-11-18")
 ].copy()
 
 # Establish reqs for report eligibility flag
@@ -47,4 +47,4 @@ report_df.to_csv("../data/final_appeals_data.csv", index=False)
 report_summary_df = pd.DataFrame(list(report_summary.items()), columns = ["indicator", "value"])
 report_summary_df.to_csv("../data/final_indicators_report.csv", index=False)
 
-print(report_summary_df.to_string(index=False))
+print(report_summary_df.to_string(index=False, float_format= lambda x: f"{x:,.2f}"))
