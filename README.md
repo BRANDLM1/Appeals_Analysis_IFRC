@@ -35,6 +35,9 @@ This project uses public appeal records from the [IFRC GO Appeals API](https://g
 
 The source includes appeal types, dates, statuses, disaster categories, requested and funded amounts (CHF), beneficiary estimates, and geographic references. Python retrieves the API records and converts them to a working CSV.
 
+The world map used in the Power BI dash:  [Github - Tobi-Data_Detective](https://github.com/Tobi-DataDetective/Power-BI-Shape-Maps/blob/master/world-countries-sans-antarctica.json?utm_source=chatgpt.com).
+Sourced from github, imported as raw JSON custom map type for the shape map visualization.
+
 The current reporting scope is **Emergency Appeals beginning January 1, 2022 through November 17, 2026**. Funding amounts are the values available when the data was extracted, not necessarily money received during that date range.
 
 See [methodologies.md](documentation/methodologies.md) for the selection and calculation rules, and [data_dictionary.md](documentation/data_dictionary.md) for field definitions.
