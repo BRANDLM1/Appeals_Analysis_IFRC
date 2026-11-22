@@ -93,15 +93,18 @@ For the 2022–present Emergency Appeal selection, the three reporting tools pro
 
 ### Excel analysis
 
-The Excel worksheet uses a PivotTable to compare requested and funded amounts by IFRC region and check the totals against Python.
+The Excel worksheet uses a PivotTable and slicers to compare requested and funded amounts by IFRC region, appeal start year, and status, to check the totals against Python. A second pivot table allows for granular filtering of specific appeal records based on region, disaster, amd status.
 
-[Excel regional funding analysis](documentation/excel_analysis.png)
+[Excel regional funding analysis with slicers](documentation/excel_analysis_v2.png)
+[Excel appeal record lookup by filters](documentation/excel_analysis_v2p2.png)
 
 ### Power BI dashboard
 
-The Power BI dashboard summarizes requested and funded amounts, funding coverage, and the net funding gap. Regional comparisons and disaster-type filters allow further investigation of the same records.
+The Power BI dashboard summarizes requested and funded amounts, funding coverage, and the net funding gap. Regional comparisons via clustered column chart display requested vs funded financial sums. Disaster-type filters allow further investigation of the same records.
 
-[Power BI appeal funding dashboard](documentation/bi_dashboard.png)
+New version capable of slicing by region, country, and disaster type. Additionally investigate countries ranked by appeal count and a world map of appeals. Adaptive key takeaways cater to granular selections.
+
+[Power BI appeal funding dashboard](documentation/bi_dashboard_v2.png)
 
 ## Limitations and Future Work
 
